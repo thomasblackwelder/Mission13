@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<Bowler>
+
+<h1>Bowlerz.</h1>
+
+<btn>Add New Bowler</btn>
+
+<ul>
+    @foreach (var b in Model)
+            {
+                <li class="font-weight-bold">@b.BowlerFirstName @b.BowlerMiddleInit @b.BowlerLastName</li>
+                <li style="list-style-type:none"> @b.BowlerAddress @b.BowlerCity, @b.BowlerState @b.BowlerZip</li>
+                <li style="list-style-type:none">@b.BowlerPhoneNumber</li>
+                <btn as>Delete</btn>
+            }
+
+</ul>
